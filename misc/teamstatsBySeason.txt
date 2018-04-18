@@ -1,7 +1,7 @@
 NBA.stats.teamStats({ Season: '2012-13' })
   .then(data => {
           // console.log(data);
-      const res = data.filter(player => player.teamId === 1610612752); // * Knicks teamId
+      const res = data.filter(team => team.teamId === 1610612752); // * Knicks teamId
       console.log(res);
 });
 

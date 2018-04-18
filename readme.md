@@ -22,3 +22,9 @@ Main form (Search Players) details:
 - Shows list of players who were on the team that year (& # points/rebs/ast?)
 - Selecting a player from the list shows their more in depth stats (?)
 - 'Add to Team' button on bottom adds that player to your team
+
+Tables:
+
+- NBA Teams & teamId (Knicks: 1610612752 , etc)
+- Created team (players & their stats)
+-* Users
