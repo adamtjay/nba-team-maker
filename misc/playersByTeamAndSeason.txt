@@ -16,6 +16,7 @@ NBA.stats.playersInfo({ Season: '2017-18' })
     lastName: 'Beasley',
     playerId: 201563,
     teamId: 1610612752 },
+
   { firstName: 'Trey',
     lastName: 'Burke',
     playerId: 203504,

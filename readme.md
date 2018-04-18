@@ -1,10 +1,13 @@
-NBA API Team Maker - Mix & Compare
+NBA Team Maker - Mix & Compare
+
+Wireframe: /misc/wireframe-plan.jpg
+Table Schema: /misc/table-schema.jpg
 
 Overview:
 
 - ** Pick 5 players - from any SEASON or team
     - add each player (or a representation of their stats that yr) into a new "team"
-    - (* Bonus) compare the custom team's stats against any other team's stats from any season
+    - ** compare the custom team's stats against any other team's stats from any season
 
 Flow:
 
@@ -12,8 +15,8 @@ Flow:
 - View any player/team/season combination (using form, Team > Season > Player)
 - Add 5 players to the team
 - Combine/average the stats of those 5 players (all, or just main stats?)
--* Choose another team to compare against
--* Compares the stats (excluding wins/losses etc) of custom team vs. other team
+- ** Choose another team to compare against
+- ** Compares the stats of custom team vs. other team
 
 
 Main form (Search Players) details:

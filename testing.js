@@ -5,8 +5,8 @@ const NBA = require("nba");
 // const curry = NBA.findPlayer('Stephen Curry');
 // NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
 
-// const lbj = NBA.findPlayer('LeBron James');
-// NBA.stats.playerInfo({ PlayerID: lbj.playerId }).then(data => console.log(data));
+const lbj = NBA.findPlayer('LeBron James');
+NBA.stats.playerInfo({ PlayerID: lbj.playerId }).then(data => console.log(data));
 
 // const porzingis = NBA.findPlayer('Kristaps Porzingis');
 // NBA.stats.playerInfo({ PlayerID: porzingis.playerId }).then(data => console.log(data));
@@ -19,19 +19,35 @@ const NBA = require("nba");
 
 // console.log(NBA);
 
+// console.log(NBA);
+
 // **  get Players, based on Season & Team
-NBA.stats.playersInfo({ Season: '2017-18' })
+NBA.stats.playersInfo({ Season: '2012-13' })
   .then(data => {
-      const res = data.filter(player => player.teamId === 1610612752); // * Knicks teamId
+      const res = data.filter(player => player.teamId === 1610612738); // * Knicks teamId
       console.log(res);
 });
 
-// ** get Team Stats, based on Season
-NBA.stats.teamStats({ Season: '2012-13' })
-  .then(data => {
-      const res = data.filter(player => player.teamId === 1610612752); // * Knicks teamId
-      console.log(res);
-});
+// NBA.stats.playerInfo({ Season: '2012-13', teamId: '1610612738' })
+//   .then(data => {
+//       const res = data.filter(player => player.teamId === 1610612738); // * Knicks teamId
+//       console.log(res);
+// });
+//
+// for (let i=0; i<2147483647; i++) {
+//   NBA.stats.playerInfo({ PlayerId: i })
+//     .then(data => {
+//         const res = data.filter(player => player.teamId === 1610612738); // * Knicks teamId
+//         console.log(res);
+//   });
+// };
+
+// // ** get Team Stats, based on Season
+// NBA.stats.teamStats({ Season: '2012-13' })
+//   .then(data => {
+//       const res = data.filter(player => player.teamId === 1610612752); // * Knicks teamId
+//       console.log(res);
+// });
 
 
 //NBA.stats. .then(data => console.log(data));

@@ -1,7 +1,7 @@
 NBA.stats.teamStats({ Season: '2017-18' })
   .then(data => {
       for (let i=0; i < 31; i++) {console.log(data[i].teamName + ' - ' + data[i].teamId)};
-  }).catch(err => console.log);
+    }).catch(err => console.log);
 
 
 Atlanta Hawks - 1610612737
