@@ -4,11 +4,19 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nba": "^4.2.2"
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nba": "^4.2.2",
+    "nodemon": "^1.17.3",
+    "pg-promise": "^8.4.0"
   }
 }
