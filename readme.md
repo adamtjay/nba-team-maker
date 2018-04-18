@@ -27,4 +27,4 @@ Tables:
 
 - NBA Teams & teamId (Knicks: 1610612752 , etc)
 - Created team (players & their stats)
--* Users
+- (Users)
