@@ -1,0 +1,68 @@
+---console.log(Object.getOwnPropertyNames( NBA ));---
+    [ 'stats',
+      'sportVu',
+      'synergy',
+      'players',
+      'teams',
+      'teamIdFromName',
+      'playerIdFromName',
+      'findPlayer',
+      'searchPlayers',
+      'updatePlayers',
+      'updateTeams' ]
+
+---NBA.stats---
+      [ 'playerProfile',
+        'playerInfo',
+        'playersInfo',
+        'teamStats',
+        'teamSplits',
+        'teamYears',
+        'playerSplits',
+        'shots',
+        'scoreboard',
+        'boxScoreSummary',
+        'boxScore',
+        'playByPlay',
+        'teamHistoricalLeaders',
+        'teamInfoCommon',
+        'commonTeamRoster',
+        'teamPlayerDashboard',
+        'lineups',
+        'playerTracking',
+        'homepageV2',
+        'assistTracker',
+        'playerStats',
+        'playerClutch',
+        'teamClutch',
+        'playerShooting',
+        'teamShooting',
+        'leagueGameLog',
+        'leagueLeaders',
+        'leagueStandings',
+        'playerHustleLeaders',
+        'teamHustleLeaders',
+        'playerHustle',
+        'teamHustle',
+        'withTransport' ]
+
+---NBA.sportVu---
+        [ 'speed',
+          'touches',
+          'passing',
+          'defense',
+          'rebounding',
+          'drives',
+          'shooting',
+          'catchShoot',
+          'pullUpShoot',
+          'withTransport' ]
+
+---NBA.synergy---
+        [ 'playerPlayType', 'teamPlayType', 'withTransport' ]
+
+---NBA.players---
+(array of all players 0 - ~400)
+
+---NBA.findPlayer---
+[ 'length', 'name', 'arguments', 'caller', 'prototype' ]      
