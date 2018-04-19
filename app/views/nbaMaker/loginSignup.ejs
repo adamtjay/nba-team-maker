@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<% include ../partials/boilerplate %>
+
+<h1>Login / Register</h1>
+<hr/>
+
+<% data.forEach(player => {  %>
+
+<div class="player-info">
+
+  <h3 class="player-info-title"> &laquo; #<%= player.playerid %>: <%= player.firstname %>  <%= player.lastname %> &raquo;</h3>
+  <p class="player-info-content"> <%= player.teamcity %> <%= player.teamname %> </p>
+  <p class="player-info-content">  (nbaTeamId: <%= player.nbateamid %>) </p>
+
+</div>
+
+<% }); %>
+
+<% include ../partials/end %>

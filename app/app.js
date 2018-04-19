@@ -11,7 +11,7 @@ const PORT = 3000;
 
 const app = express();
 
-// const nbaRouter = require('./routes/nbaRouter');
+const nbaRouter = require('./routes/nbaRouter');
 
 
 // ***  Middleware
@@ -27,11 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // *** Root route
 app.get('/', (req, res) => {
-  res.send('hello');
+  res.send('Hi there');
 });
 
 // *** Router
-//app.use('/routerpath', nbaRouter);
+app.use('/nba', nbaRouter);
 
 // Listen on PORT
 app.listen(PORT, () => {
