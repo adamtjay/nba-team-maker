@@ -2,6 +2,7 @@
 const nbaRouter = require('express').Router()
 const nbaController = require('../controllers/nbaController');
 const nbaViewController = require('../controllers/nbaViewController');
+const nbaApiController = require('../controllers/nbaApiController');
 
 // Import the model
 // const nbaDb = require('../models/nbaModel');
@@ -14,9 +15,13 @@ function sendError(err, req, res, next) {
   })
 }
 
+
 nbaRouter.route('/')
   .get(nbaController.getPlayers, sendError)
   .post(sendError);
+
+nbaRouter.get('/searchByPlayerName', nbaViewController.goToPlayerSearch, nbaApiController.getPlayerId, sendError);
+nbaRouter.post('/searchByPlayerName', nbaApiController.getPlayerId, sendError);
 
 nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
 nbaRouter.get('/new', sendError);

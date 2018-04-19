@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // *** Root route
 app.get('/', (req, res) => {
-  res.send('Hi there <br/><br/><a href="http://localhost:3000/nba">Go to /NBA</a>');
+  res.send('Hi there <br/><br/><a href="http://localhost:3000/nba">Go to NBA Maker app</a>');
 });
 
 // *** Router

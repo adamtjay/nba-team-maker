@@ -5,6 +5,13 @@ function goToLogin(req, res) {
       });
     }
 
+function goToPlayerSearch(req, res) {
+  res.render('nbaMaker/searchByPlayerName', {
+    data: "data placeholder"
+  });
+}
+
 module.exports = {
-  goToLogin
+  goToLogin,
+  goToPlayerSearch
 }
