@@ -24,9 +24,9 @@
   <!-- <h4 class="player-info-team"> <%= player.commonPlayerInfo[0].teamCity %> <%= player.commonPlayerInfo[0].teamName %> </h4> -->
   <p class="player-info-content"><strong>Position:</strong> <%= player.commonPlayerInfo[0].position %> </p>
 
-  <p class="player-info-content"> <strong>Points</strong> - <%= player.playerHeadlineStats[0].pts %>
-      <br/> <strong>Rebounds</strong> - <%= player.playerHeadlineStats[0].reb %>
-      <br/> <strong>Assists</strong> - <%= player.playerHeadlineStats[0].ast %>
+  <p class="player-info-content"> <strong>Points</strong>: <%= player.playerHeadlineStats[0].pts %>
+      <br/> <strong>Rebounds</strong>: <%= player.playerHeadlineStats[0].reb %>
+      <br/> <strong>Assists</strong>: <%= player.playerHeadlineStats[0].ast %>
     </p>
 
 <a href="https://stats.nba.com/player/<%= player.commonPlayerInfo[0].personId %>" target="_blank">View NBA.com Stats</a>
