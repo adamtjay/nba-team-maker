@@ -9,7 +9,7 @@ function getPlayers(req, res, next) {
     // res.locals.nba = data;
 
     //**** temp, replace w viewController
-    res.render('./nbaMaker/loginSignup', {
+    res.render('./nbaMaker/searchResults', {
       data: data
     });
 

@@ -1,11 +1,12 @@
-NBA Team Maker - Mix & Compare
+NBA Team Maker - Mix & Compare Player Stats
 
-Wireframe: /misc/wireframe-plan.jpg
-Table Schema: /misc/table-schema.jpg
+- Wireframe: /misc/wireframe-plan.jpg
+- Table Schema: /misc/table-schema.jpg
+- Game & view flow: /misc/game-view-flow.jpg
 
 Overview:
 
-- ** Pick 5 players - from any SEASON or team
+- Pick 5 players - from any SEASON or team
     - add each player (or a representation of their stats that yr) into a new "team"
     - ** compare the custom team's stats against any other team's stats from any season
 
@@ -25,9 +26,3 @@ Main form (Search Players) details:
 - Shows list of players who were on the team that year (& # points/rebs/ast?)
 - Selecting a player from the list shows their more in depth stats (?)
 - 'Add to Team' button on bottom adds that player to your team
-
-Tables:
-
-- NBA Teams & teamId (Knicks: 1610612752 , etc)
-- Created team (players & their stats)
-- (Users)
