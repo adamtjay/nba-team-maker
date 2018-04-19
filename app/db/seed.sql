@@ -2,30 +2,27 @@
 
 DELETE FROM players;
 
---for testing
-DROP TABLE IF EXISTS players;
-CREATE TABLE players (
-  playerId SERIAL PRIMARY KEY,
-  firstName VARCHAR(255),
-  lastName VARCHAR(255),
-  teamTableId INT REFERENCES nbaTeams(teamTableId),
-  customTeamId INT
-);
 
 
 -- Players
 
-INSERT INTO players (firstName, lastName, teamTableId, customTeamId)
-VALUES ('Stephen', 'Curry', 10, 1);
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Stephen', 'Curry', 'Stephen Curry', 10, 1);
 
-INSERT INTO players (firstName, lastName, teamTableId, customTeamId)
-VALUES ('Kristaps', 'Porzingis', 20, 1);
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Kristaps', 'Porzingis', 'Kristaps Porzingis', 20, 1);
 
-INSERT INTO players (firstName, lastName, teamTableId, customTeamId)
-VALUES ('LeBron', 'James', 6, 1);
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('LeBron', 'James', 'LeBron James', 6, 1);
 
-INSERT INTO players (firstName, lastName, teamTableId, customTeamId)
-VALUES ('Ben', 'Simmons', 23, 1);
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Ben', 'Simmons', 'Ben Simmons', 23, 1);
 
-INSERT INTO players (firstName, lastName, teamTableId, customTeamId)
-VALUES ('Chris', 'Paul', 13, 35);
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Chris', 'Paul', 'Chris Paul', 13, 1);
+
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Karl-Anthony', 'Towns', 'Karl-Anthony Towns', 18, 1);
+
+INSERT INTO players (firstName, lastName, fullName, teamTableId, customTeamId)
+VALUES ('Nikola', 'Jokic', 'Nikola Jokic', 8, 1);

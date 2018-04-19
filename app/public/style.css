@@ -6,12 +6,36 @@ body {
 
 
 .player-info {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0 auto;
-  padding: 5px 0px;
+  padding: 10px 0px;
   border: 1px solid black;
+  margin-top: 20px;
+}
+
+.player-info h3 {
+  font-size: 27px;
 }
 
 .player-info-content {
 
+}
+
+.nav-bar {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: inline;
+  padding: 0px 60px;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+.pg-title-header {
+  border: 1px solid black;
 }

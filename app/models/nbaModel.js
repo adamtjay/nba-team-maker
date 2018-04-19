@@ -6,6 +6,7 @@ function getAllPlayers() {
     FROM players
     JOIN nbaTeams
     ON players.teamTableId = nbaTeams.teamTableId
+    ORDER BY players.playerId
     `
   );
   return queryP;

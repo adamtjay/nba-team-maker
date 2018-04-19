@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<% include ../partials/boilerplate %>
+
+<div class="pg-title-header">
+    <h1>Team Search Results</h1>
+  </div>
+
+<% data.forEach(player => {  %>
+
+<div class="player-info">
+
+  <h3 class="player-info-title"> &laquo; (<%= player.playerid %>) <%= player.firstname %>  <%= player.lastname %> &raquo;</h3>
+  <hr/>
+  <p class="player-info-content"> <%= player.teamcity %> <%= player.teamname %> </p>
+  <p class="player-info-content">  (nbaTeamId: <%= player.nbateamid %>) </p>
+
+</div>
+
+<% }); %>
+
+<% include ../partials/end %>

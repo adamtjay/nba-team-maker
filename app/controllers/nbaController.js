@@ -1,22 +1,24 @@
 const nbaDb = require('../models/nbaModel');
 
+
+//get All
 function getPlayers(req, res, next) {
   console.log('Querying the DB');
   nbaDb.getAllPlayers()
   .then(data => {
-    // console.log('Queried the DB and got ' + data.length + ' results');
+    console.log('* getPlayers: *')
     console.log(data);
     // res.locals.nba = data;
 
     //**** temp, replace w viewController
-    res.render('./nbaMaker/searchResults', {
+    res.render('./nbaMaker/playerSearchResults', {
       data: data
     });
 
     next();
   })
   .catch(err => {
-    console.log('getAll catch error');
+    console.log('getAll catch error detected');
     next(err);
   });
 }
