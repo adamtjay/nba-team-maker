@@ -1,7 +1,7 @@
 // Import express to get the router
 const nbaRouter = require('express').Router()
 const nbaController = require('../controllers/nbaController');
-// const nbaViewController = require('../controllers/nbaViewController');
+const nbaViewController = require('../controllers/nbaViewController');
 
 // Import the model
 // const nbaDb = require('../models/nbaModel');
@@ -18,6 +18,7 @@ nbaRouter.route('/')
   .get(nbaController.getPlayers, sendError)
   .post(sendError);
 
+nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
 nbaRouter.get('/new', sendError);
 nbaRouter.get('/:id/update', sendError);
 
