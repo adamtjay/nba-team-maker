@@ -2,14 +2,14 @@
 <% include ../partials/boilerplate %>
 
 <div class="pg-title-header">
-    <h1>Search By Player Name</h1>
+    <h1>Search Active Players</h1>
   </div>
 
   <!-- <p> <%= data %> </p> -->
   <br/><br/>
 
-  <form class="login-main-form" action="/nba/searchByPlayerName" method="POST">
-      <label>Enter full Player Name: </label><input type="textarea" name="playername"></input>
+  <form class="login-main-form" action="/nba/searchByName" method="POST">
+      <label>Enter full name: </label><input type="textarea" name="playername"></input>
       <br/><br/>
       <button type="submit">Search</button>
 </form>

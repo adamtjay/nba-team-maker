@@ -6,7 +6,7 @@ function goToLogin(req, res) {
     }
 
 function goToPlayerSearch(req, res) {
-  res.render('nbaMaker/searchByPlayerName', {
+  res.render('nbaMaker/searchByName', {
    data: "data placeholder"
     // data: res.locals.playerid
   });
