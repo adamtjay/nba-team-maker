@@ -14,11 +14,15 @@ body {
 }
 
 .player-info h3 {
-  font-size: 27px;
+  font-size: 32px;
+}
+
+.player-info-team {
+  font-size: 22px;
 }
 
 .player-info-content {
-
+  font-size: 18px;
 }
 
 .nav-bar {
@@ -38,4 +42,13 @@ body {
 
 .pg-title-header {
   border: 1px solid black;
+}
+
+.add-to-team {
+  font-size: 20px;
+  padding: 10px 50px;
+}
+
+.add-to-team:hover {
+  background: yellow;
 }

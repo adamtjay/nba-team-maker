@@ -6,6 +6,7 @@ const NBA = require("nba");
 // NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
 
 const lbj = NBA.findPlayer('LeBron James');
+  console.log('lbj: ' + lbj);
 NBA.stats.playerInfo({ PlayerID: lbj.playerId }).then(data => console.log(data));
 
 // const porzingis = NBA.findPlayer('Kristaps Porzingis');

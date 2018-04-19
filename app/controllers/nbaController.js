@@ -10,8 +10,8 @@ function getPlayers(req, res, next) {
     console.log(data);
     // res.locals.nba = data;
 
-    //**** temp, replace w viewController
-    res.render('./nbaMaker/playerSearchResults', {
+    //**** temp main route, replace w viewController
+    res.render('./nbaMaker/teamSearchResults', {
       data: data
     });
 

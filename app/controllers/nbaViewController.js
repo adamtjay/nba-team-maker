@@ -7,11 +7,19 @@ function goToLogin(req, res) {
 
 function goToPlayerSearch(req, res) {
   res.render('nbaMaker/searchByPlayerName', {
-    data: "data placeholder"
+   data: "data placeholder"
+    // data: res.locals.playerid
+  });
+}
+
+function goToSearchResults(req, res, next) {
+  res.render('nbaMaker/playerSearchResults', {
+    player: res.locals.playerobj
   });
 }
 
 module.exports = {
   goToLogin,
-  goToPlayerSearch
+  goToPlayerSearch,
+  goToSearchResults
 }

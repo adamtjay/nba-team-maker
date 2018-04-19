@@ -3,20 +3,25 @@
 <% include ../partials/boilerplate %>
 
 <div class="pg-title-header">
-    <h1>Player Search Results</h1>
+    <h1>Player API Search Results</h1>
   </div>
 
-<% data.forEach(player => {  %>
 
 <div class="player-info">
 
-  <h3 class="player-info-title"> &laquo; (<%= player.playerid %>) <%= player.firstname %>  <%= player.lastname %> &raquo;</h3>
+  <h3 class="player-info-title"> &laquo;    <%= player.commonPlayerInfo[0].firstName %> <%= player.commonPlayerInfo[0].lastName %>    &raquo;</h3>
   <hr/>
-  <p class="player-info-content"> <%= player.teamcity %> <%= player.teamname %> </p>
-  <p class="player-info-content">  (nbaTeamId: <%= player.nbateamid %>) </p>
+  <h4 class="player-info-team"> <%= player.commonPlayerInfo[0].teamCity %> <%= player.commonPlayerInfo[0].teamName %> </h4>
+
+  <p class="player-info-content"> Points -  <%= player.playerHeadlineStats[0].pts %>
+      <br/> Rebounds - <%= player.playerHeadlineStats[0].reb %>
+      <br/> Assists - <%= player.playerHeadlineStats[0].ast %>
+    </p>
+
+<button type="submit" class="add-to-team">Add to Team</button>
+  <br/><br/>
 
 </div>
 
-<% }); %>
 
 <% include ../partials/end %>
