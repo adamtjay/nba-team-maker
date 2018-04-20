@@ -23,7 +23,9 @@ function getPlayersFromTeamList(req, res, next) {
             data.forEach(player => {
               if (player.teamId === parseInt(req.body.nbateamselect)) { resPlayers.push(player)};
               });
-            console.log('resPlayers: ' + resPlayers[0].firstName);
+            // console.log('resPlayers: ' + resPlayers[0].firstName);
+
+            
             res.locals.playerobjs = resPlayers;
             next();
         })

@@ -27,7 +27,7 @@ function getNbaTeamsList(req, res, next) {
   nbaDb.getTeamsList()
   .then(data => {
     console.log('* getTeamsList *');
-    console.log(data);
+    // console.log(data);
 
     //**** temp main route, replace w viewController
     res.render('./nbaMaker/searchByTeam', {

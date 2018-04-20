@@ -25,7 +25,19 @@ function getPlayerObjByName(name) {
 //     }
 
 function getPlayerObjsByTeam() {
+          // return NBA.stats.playersInfo({ Season: '2017-18' });
+          const resPlayers = NBA.stats.playersInfo({ Season: '2017-18' });
+
+          // const tempArr = [];
+          // for (let i=0; i < resPlayers.length; i++) {
+          //   console.log('resplayer ' + resPlayer[i]);
+          //   tempArr.push(resPlayer[i]);
+          // }
+
+          // console.log('vals:' + Object.values(NBA.stats.playersInfo({ Season: '2017-18' })));
+
           return NBA.stats.playersInfo({ Season: '2017-18' });
+
 }
 
 
