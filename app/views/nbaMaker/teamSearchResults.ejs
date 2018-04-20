@@ -10,20 +10,10 @@
 
 
 
-<div class="player-info-list">
-
-  <img class="player-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png">
-
-  <h3 class="player-info-list-title"> &laquo; <%= player.firstName %> <%= player.lastName %> &raquo;</h3>
-  <hr/>
-  <p class="player-info-list-content"> <%= player.teamCity %> <%= player.teamName %> </p>
-  <p class="player-info-list-content">  (playerId: <%= player.playerId %>) </p>
-  <p class="player-info-list-content">  (teamId: <%= player.teamId %>) </p>
-
-
-</div>
+    <% include ../partials/player-info-list %>
 
 
 <% }); %>
+
 
 <% include ../partials/end %>

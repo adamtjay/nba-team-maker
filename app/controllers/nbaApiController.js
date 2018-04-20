@@ -3,6 +3,7 @@ const nbaApiService = require('../services/nbaApiService');
 
 function getPlayerObj(req, res, next) {
   console.log('req: ' + req.body.playername);
+  // console.log(typeof(req.body.playername));
   nbaApiService.getPlayerObjByName(req.body.playername)   //player's name
     .then(data => {
       console.log(data);
@@ -25,8 +26,9 @@ function getPlayersFromTeamList(req, res, next) {
               });
             // console.log('resPlayers: ' + resPlayers[0].firstName);
 
-            
-            res.locals.playerobjs = resPlayers;
+            // nbaApiService.queryPlayersList(resPlayers);  // *** for querying API
+
+            res.locals.playerobjs = resPlayers; //change
             next();
         })
         .catch(err => console.log(err));

@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-
-<% include ../partials/boilerplate %>
-
-<div class="pg-title-header">
-    <h1>Team Search Results</h1>
-  </div>
-
-<% players.forEach(player => {  %>
-
-
-
 <div class="player-info-list">
 
   <img class="player-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png">
@@ -26,8 +14,3 @@
 
 
 </div>
-
-
-<% }); %>
-
-<% include ../partials/end %>

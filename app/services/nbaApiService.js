@@ -40,8 +40,34 @@ function getPlayerObjsByTeam() {
 
 }
 
+function queryPlayersList(playersobj) {
+    // console.log('playersobj length: ' + playersobj.length);
+    let newPlayerInfo = [];
+
+    for (let i=0; i < playersobj.length; i++) {
+    // playersobj.forEach((obj) => {
+      // console.log('obj name: ' + obj.firstName + ' ' + obj.lastName);
+
+      // if (playersobj[i].hasOwnProperty('playerId') === 'false') { continue };
+
+      let playersName = `${playersobj[i].firstName} ${playersobj[i].lastName}`;
+      let newName = playersName.toString();
+      console.log('players name: ' + newName);
+
+      let resPlayer = NBA.findPlayer(newName);
+      console.log('resplayer id: ' + resPlayer);
+      let statsRes = NBA.stats.playerInfo({ PlayerID: resPlayer.playerId, Season: '2017-18' });
+
+      newPlayerInfo.push(statsRes);
+
+    // }
+    }
+    console.log('newplayer arr: ' + newPlayerInfo);
+    return newPlayerInfo;
+}
 
 module.exports = {
   getPlayerObjByName,
-  getPlayerObjsByTeam
+  getPlayerObjsByTeam,
+  queryPlayersList
 }

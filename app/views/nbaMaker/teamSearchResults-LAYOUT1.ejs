@@ -15,14 +15,12 @@
   <img class="player-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png">
 
   <h3 class="player-info-list-title"> <%= player.firstName %> <%= player.lastName %> </h3>
-  <hr/>
-
-  <a class="nba-com-link" href="https://stats.nba.com/player/<%= player.playerId %>" target="_blank"><strong>View Stats on NBA.com</strong></a>
-
-
-  <br/><br/>
-
   <button type="submit" class="add-to-team">Add to Team</button>
+
+  <br/><br/><hr/>
+  <a class="nba-com-link" href="https://stats.nba.com/player/<%= player.playerId %>" target="_blank"><strong>Advanced Stats on NBA.com</strong></a>
+  <p class="player-info-list-content"> PlayerID: <%= player.playerId %> </p>
+  <p class="player-info-list-content"> TeamID: <%= player.teamId %> </p>
 
 
 </div>
