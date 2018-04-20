@@ -23,6 +23,23 @@ function getPlayers(req, res, next) {
   });
 }
 
+function getNbaTeamsList(req, res, next) {
+  nbaDb.getTeamsList()
+  .then(data => {
+    console.log('* getTeamsList *');
+    console.log(data);
+
+    //**** temp main route, replace w viewController
+    res.render('./nbaMaker/searchByTeam', {
+      data: data
+    });
+
+    next();
+
+  })
+}
+
 module.exports = {
-  getPlayers
+  getPlayers,
+  getNbaTeamsList
 }

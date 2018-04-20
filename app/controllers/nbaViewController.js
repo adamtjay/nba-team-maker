@@ -18,8 +18,15 @@ function goToSearchResults(req, res, next) {
   });
 }
 
+function goToTeamSearchForm(req, res, next) {
+  res.render('nbaMaker/searchByTeam', {
+    data: data     //might need change
+  })
+}
+
 module.exports = {
   goToLogin,
   goToPlayerSearch,
-  goToSearchResults
+  goToSearchResults,
+  goToTeamSearchForm
 }

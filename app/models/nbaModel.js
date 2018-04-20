@@ -12,7 +12,16 @@ function getAllPlayers() {
   return queryP;
 }
 
+function getTeamsList() {
+  const queryP = db.any(`
+    SELECT *
+    FROM nbaTeams
+    `);
+    return queryP;
+}
+
 
 module.exports = {
-  getAllPlayers
+  getAllPlayers,
+  getTeamsList
 }

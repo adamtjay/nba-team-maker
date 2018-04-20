@@ -23,6 +23,9 @@ nbaRouter.route('/')
 nbaRouter.get('/searchByName', nbaViewController.goToPlayerSearch, sendError);
 nbaRouter.post('/searchByName', nbaApiController.getPlayerObj, nbaViewController.goToSearchResults, sendError);
 
+nbaRouter.get ('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
+// nbaRouter.post ('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
+
 nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
 nbaRouter.get('/new', sendError);
 nbaRouter.get('/:id/update', sendError);
