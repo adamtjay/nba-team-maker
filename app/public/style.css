@@ -2,11 +2,35 @@ body {
   text-align: center;
   /* max-width: 80%; */
   margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  background: blue;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 15px;
 }
 
 .main-container {
   max-width: 60%;
   margin: 0 auto;
+}
+
+.main-logo {
+  font-family: 'Righteous', cursive;
+  letter-spacing: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: linear-gradient(#edf2f9, white);
+  font-size: 28px;
 }
 
 .player-info {
@@ -16,6 +40,7 @@ body {
   border: 1px solid black;
   border-radius: 20px;
   margin-top: 20px;
+  background: linear-gradient(#edf2f9, white);
 }
 
 .player-info h3 {
@@ -51,19 +76,21 @@ body {
 
 .pg-title-header {
   font-size: 20px;
-  border: 1px solid black;
-  border-radius: 30px;
+  /* border: 1px solid black;
+  border-radius: 30px; */
 }
 
 .add-to-team {
   margin-top: -2%;
-  font-size: 20px;
-  padding: 10px 50px;
+  font-size: 23px;
+  padding: 12px 70px;
   border-radius: 20px;
+  background: linear-gradient(lightblue, #fefefe);
 }
 
 form button:hover, form input:hover, .add-to-team:hover {
-  background: lightblue;
+  background: linear-gradient(lightblue, white);
+  color: black;
 }
 
 form label {
@@ -84,4 +111,8 @@ form button {
 
 .player-avatar {
   border-radius: 80px;
+}
+
+.nba-com-link {
+  font-size: 20px;
 }

@@ -1,0 +1,37 @@
+<div class="player-info">
+
+  <h3 class="player-info-title"> <%= player.commonPlayerInfo[0].firstName %> <%= player.commonPlayerInfo[0].lastName %> </h3>
+  <!-- <% if (player.commonPlayerInfo[0].firstName === 'Kristaps') { %>
+    <p><%= player.commonPlayerInfo[0].lastName %></p>
+  <% } %> -->
+
+  <h4 class="player-info-team"> &laquo; <%= player.commonPlayerInfo[0].teamCity %> <%= player.commonPlayerInfo[0].teamName %> &raquo; </h4>
+
+  <hr/>
+
+
+  <img class="player-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.commonPlayerInfo[0].personId %>.png">
+  <br/><br/>
+  <button type="submit" class="add-to-team">Add to Team</button>
+  <br/><br/><a class="nba-com-link" href="https://stats.nba.com/player/<%= player.commonPlayerInfo[0].personId %>" target="_blank"><strong>Advanced Stats on NBA.com</strong></a>
+
+
+  <!-- <h4 class="player-info-team"> <%= player.commonPlayerInfo[0].teamCity %> <%= player.commonPlayerInfo[0].teamName %> </h4> -->
+  <p class="player-info-content"><strong>Position:</strong> <%= player.commonPlayerInfo[0].position %> </p>
+
+  <p class="player-info-content"> <strong>Points</strong>: <%= player.playerHeadlineStats[0].pts %>
+      <br/> <strong>Rebounds</strong>: <%= player.playerHeadlineStats[0].reb %>
+      <br/> <strong>Assists</strong>: <%= player.playerHeadlineStats[0].ast %>
+    </p>
+
+<!-- <a href="https://stats.nba.com/player/<%= player.commonPlayerInfo[0].personId %>" target="_blank"><strong>View NBA.com Player Stats</strong></a> -->
+<hr/>
+<a href="/nba/searchByName">Back to Search</a>
+<br/>
+
+<hr/><br/>
+
+<!-- <button type="submit" class="add-to-team">Add to Team</button> -->
+  <br/><br/>
+
+</div>
