@@ -31,6 +31,14 @@ button {
   border-radius: 20px;
   background: linear-gradient(#edf2f9, white);
   font-size: 28px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.main-logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
 }
 
 .player-info {
@@ -43,9 +51,27 @@ button {
   background: linear-gradient(#edf2f9, white);
 }
 
+.player-info-list {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 10px 0px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 20px;
+  background: linear-gradient(#edf2f9, white);
+}
+
 .player-info-title {
   margin-top: 1.5%;
   font-size: 47px;
+}
+
+.player-info-list-title {
+  font-size: 30px;
+}
+
+.player-info-list-content {
+  
 }
 
 .player-info-team {
@@ -61,6 +87,10 @@ button {
 .nav-bar {
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+.nav-holder {
+  margin-top: 1.5%;
 }
 
 .nav-item {
