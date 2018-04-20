@@ -43,14 +43,14 @@ button {
   background: linear-gradient(#edf2f9, white);
 }
 
-.player-info h3 {
+.player-info-title {
   margin-top: 1.5%;
-  font-size: 35px;
+  font-size: 47px;
 }
 
 .player-info-team {
-  margin-top: -3%;
-  font-size: 18px;
+  margin-top: -9%;
+  font-size: 20px;
   margin-bottom: 1%;
 }
 
@@ -110,6 +110,7 @@ form button {
 }
 
 .player-avatar {
+  margin-top: 2%;
   border-radius: 80px;
 }
 
