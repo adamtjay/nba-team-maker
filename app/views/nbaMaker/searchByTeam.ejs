@@ -11,12 +11,12 @@
 
   <form class="login-main-form" action="/nba/searchByTeam" method="POST">
 
-    <select class="nba-team-select" name="nba-team-select">
+    <select class="nba-team-select" name="nbateamselect">
 
 
       <% data.forEach(team => { %>
 
-        <option class="nba-team-option"><%= team.teamcity %> <%= team.teamname %></option>
+        <option class="nba-team-option" value="<%= team.nbateamid %>"><%= team.teamcity %> <%= team.teamname %> </option>
         <% }) %>
 
           </select>

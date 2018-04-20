@@ -6,11 +6,11 @@
     <h1>Team Search Results</h1>
   </div>
 
-<% data.forEach(player => {  %>
+<% players.forEach(player => {  %>
 
 <div class="player-info-list">
 
-  <h3 class="player-info-list-title"> &laquo; (<%= player.playerid %>) <%= player.firstname %>  <%= player.lastname %> &raquo;</h3>
+  <h3 class="player-info-list-title"> &laquo; (<%= player.firstName %>) <%= player.firstname %>  <%= player.lastname %> &raquo;</h3>
   <hr/>
   <p class="player-info-list-content"> <%= player.teamcity %> <%= player.teamname %> </p>
   <p class="player-info-list-content">  (nbaTeamId: <%= player.nbateamid %>) </p>

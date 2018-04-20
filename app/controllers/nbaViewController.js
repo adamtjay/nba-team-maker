@@ -24,9 +24,18 @@ function goToTeamSearchForm(req, res, next) {
   })
 }
 
+function goToTeamSearchResults(req, res, next) {
+  // console.log('in gototeamsearchresults: ' + data)
+  res.render('nbaMaker/teamSearchResults', {
+    players: res.locals.playerobjs
+    // players: data
+  })
+}
+
 module.exports = {
   goToLogin,
   goToPlayerSearch,
   goToSearchResults,
-  goToTeamSearchForm
+  goToTeamSearchForm,
+  goToTeamSearchResults
 }
