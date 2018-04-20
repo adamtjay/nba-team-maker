@@ -1,6 +1,6 @@
 \c nba_app_db
 
-DELETE FROM players;
+-- DELETE FROM players;
 
 
 
