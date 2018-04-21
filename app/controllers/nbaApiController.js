@@ -1,13 +1,25 @@
 const nbaApiService = require('../services/nbaApiService');
 
 
-function getPlayerObj(req, res, next) {
+function getPlayerObjByName(req, res, next) {
   console.log('req: ' + req.body.playername);
   // console.log(typeof(req.body.playername));
-  nbaApiService.getPlayerObjByName(req.body.playername)   //player's name
+  nbaApiService.getPlayerObjByNameServ(req.body.playername)   //player's name
     .then(data => {
       console.log(data);
       // res.send(data);
+
+      res.locals.playerobj = data;
+      next();
+    })
+    .catch(err => console.log(err));
+}
+
+function getPlayerObjById(req, res, next) {
+  console.log('id req: ' + req.params.id);
+  nbaApiService.getPlayerObjByIdServ(req.params.id)
+    .then(data => {
+      console.log(data);
 
       res.locals.playerobj = data;
       next();
@@ -37,6 +49,7 @@ function getPlayersFromTeamList(req, res, next) {
 
 
 module.exports = {
-  getPlayerObj,
-  getPlayersFromTeamList
+  getPlayerObjByName,
+  getPlayersFromTeamList,
+  getPlayerObjById
 }

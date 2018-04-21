@@ -5,9 +5,14 @@ const NBA = require('nba');
 //     return NBA.stats.playerInfo({ PlayerID: resPlayer.playerId });
 // }
 
-function getPlayerObjByName(name) {
+function getPlayerObjByNameServ(name) {
     const resPlayer = NBA.findPlayer(name);
     return NBA.stats.playerInfo({ PlayerID: resPlayer.playerId, Season: '2017-18' });
+}
+
+function getPlayerObjByIdServ(id) {
+  const resId = parseInt(id);
+  return NBA.stats.playerInfo({ PlayerID: resId });
 }
 
 // function getPlayerObjsByTeam(teamid) {
@@ -40,7 +45,7 @@ function getPlayerObjsByTeam() {
 
 }
 
-function queryPlayersList(playersobj) {
+/*function queryPlayersList(playersobj) {
     // console.log('playersobj length: ' + playersobj.length);
     let newPlayerInfo = [];
 
@@ -64,10 +69,10 @@ function queryPlayersList(playersobj) {
     }
     console.log('newplayer arr: ' + newPlayerInfo);
     return newPlayerInfo;
-}
+}    */
 
 module.exports = {
-  getPlayerObjByName,
+  getPlayerObjByNameServ,
   getPlayerObjsByTeam,
-  queryPlayersList
+  getPlayerObjByIdServ
 }

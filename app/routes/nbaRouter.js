@@ -21,10 +21,12 @@ nbaRouter.route('/')
   .post(sendError);
 
 nbaRouter.get('/searchByName', nbaViewController.goToPlayerSearch, sendError);
-nbaRouter.post('/searchByName', nbaApiController.getPlayerObj, nbaViewController.goToSearchResults, sendError);
+nbaRouter.post('/searchByName', nbaApiController.getPlayerObjByName, nbaViewController.goToSearchResults, sendError);
 
-nbaRouter.get ('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
-nbaRouter.post ('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
+nbaRouter.get('/player/:id', nbaApiController.getPlayerObjById, nbaViewController.goToSearchResults, sendError);
+
+nbaRouter.get('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
+nbaRouter.post('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
 
 nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
 nbaRouter.get('/new', sendError);

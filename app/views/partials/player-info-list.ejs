@@ -2,7 +2,7 @@
 
   <img class="player-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png">
 
-  <h3 class="player-info-list-title"> <%= player.firstName %> <%= player.lastName %> </h3>
+  <h3 class="player-info-list-title"><a href="/nba/player/<%= player.playerId %>" style="text-decoration:none;color:black;">  <%= player.firstName %> <%= player.lastName %> </a> </h3>
   <hr/>
 
   <a class="nba-com-link" href="https://stats.nba.com/player/<%= player.playerId %>" target="_blank"><strong>View on NBA.com</strong></a>
