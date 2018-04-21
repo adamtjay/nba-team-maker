@@ -61,6 +61,11 @@ button {
   background: linear-gradient(#edf2f9, white);
 }
 
+.player-info-list-float:hover, .player-info:hover {
+  background: linear-gradient(#9fc2f9, white);
+
+}
+
 .player-info-list-float {
   float: left;
   max-width: 40%;
@@ -79,7 +84,7 @@ button {
 }
 
 .player-info-list-title {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .player-info-list hr {
@@ -131,14 +136,15 @@ button {
   font-size: 23px;
   padding: 12px 50px;
   border-radius: 20px;
-  background: linear-gradient(lightgrey, #fefefe);
+  /* background: linear-gradient(lightgrey, #fefefe); */
   /* border: 1px solid black; */
+  background: linear-gradient(lightblue, #fefefe);
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
 }
 
 
-form button:hover, form input:hover, .add-to-team:hover {
-  background: linear-gradient(lightblue, white) !important;
+form button:hover, .add-to-team:hover, form input:hover, select:hover {
+  background: linear-gradient(#6298ef, white);
   color: black;
 }
 
@@ -151,16 +157,22 @@ form input {
   font-size: 20px;
   border-radius: 20px;
   text-align: center;
+  background: linear-gradient(lightgrey, white);
 }
 
 form button {
-  padding: 10px 30px;
+  padding: 10px 50px;
   font-size: 20px;
+  background: linear-gradient(lightblue, #fefefe);
 }
 
 .player-avatar {
+  width: 260px;
+  height: 190px;
   margin-top: 2%;
-  border-radius: 80px;
+  border-radius: 20px;
+  /* background: linear-gradient(#edf2f9, white); */
+  background: rgba(255, 255, 255, 0.0)
 }
 
 .nba-com-link {
