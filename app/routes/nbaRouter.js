@@ -21,7 +21,7 @@ nbaRouter.route('/')
   .post(sendError);
 
 nbaRouter.get('/searchByName', nbaViewController.goToPlayerSearch, sendError);
-nbaRouter.post('/searchByName', nbaApiController.getPlayerObjByName, nbaViewController.goToSearchResults, sendError);
+nbaRouter.post('/searchByName', nbaApiController.getPlayerObjByName, nbaViewController.redirectToPlayerInfo, sendError);
 
 nbaRouter.get('/player/:id', nbaApiController.getPlayerObjById, nbaViewController.goToSearchResults, sendError);
 

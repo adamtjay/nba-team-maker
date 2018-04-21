@@ -37,6 +37,11 @@ function redirectToLogin(req, res) {
   res.redirect(`/nba/login`);
 }
 
+function redirectToPlayerInfo(req, res) {
+  console.log('redirecting to /player/' + res.locals.playerobj.commonPlayerInfo[0].personId);
+  res.redirect(`/nba/player/${res.locals.playerobj.commonPlayerInfo[0].personId}`)
+}
+
 
 module.exports = {
   goToLogin,
@@ -44,5 +49,6 @@ module.exports = {
   goToSearchResults,
   goToTeamSearchForm,
   goToTeamSearchResults,
-  redirectToLogin
+  redirectToLogin,
+  redirectToPlayerInfo
 }
