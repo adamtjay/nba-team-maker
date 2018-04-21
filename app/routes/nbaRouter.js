@@ -17,7 +17,7 @@ function sendError(err, req, res, next) {
 
 
 nbaRouter.route('/')
-  .get(nbaController.getPlayers, sendError)
+  .get(nbaViewController.redirectToLogin, sendError)
   .post(sendError);
 
 nbaRouter.get('/searchByName', nbaViewController.goToPlayerSearch, sendError);

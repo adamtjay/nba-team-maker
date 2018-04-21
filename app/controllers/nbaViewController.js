@@ -32,10 +32,17 @@ function goToTeamSearchResults(req, res, next) {
   })
 }
 
+function redirectToLogin(req, res) {
+  console.log('redirecting to /login/');
+  res.redirect(`/nba/login`);
+}
+
+
 module.exports = {
   goToLogin,
   goToPlayerSearch,
   goToSearchResults,
   goToTeamSearchForm,
-  goToTeamSearchResults
+  goToTeamSearchResults,
+  redirectToLogin
 }
