@@ -22,16 +22,12 @@ const NBA = require("nba");
 
 // console.log(NBA);
 
-// player profile - LOTS of stats, Season doesn't work
-const name = NBA.findPlayer('LeBron James');
-NBA.stats.playerProfile({ PlayerID : name.playerId }).then(data => console.log(data)).catch(err => console.log(err));
-
 // **  get Players, based on Season & Team
-// NBA.stats.playersInfo({ Season: '2012-13' })
-//   .then(data => {
-//       const res = data.filter(player => player.teamId === 1610612738); // * Knicks teamId
-//       console.log(res);
-// });
+NBA.stats.playersInfo({ Season: '2012-13' })
+  .then(data => {
+      const res = data.filter(player => player.teamId === 1610612738); // * Knicks teamId
+      console.log(res);
+});
 
 // NBA.stats.playerInfo({ Season: '2012-13', teamId: '1610612738' })
 //   .then(data => {
