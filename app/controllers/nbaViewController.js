@@ -45,7 +45,8 @@ function renderTeamSearchForm(req, res, next) {
 function renderTeamSearchResults(req, res, next) {
   // console.log('in renderteamsearchresults: ' + data)
   res.render('nbaMaker/teamSearchResults', {
-    players: res.locals.playerobjs
+    players: res.locals.playerobjs,
+    team: res.locals.teamname
     // players: data
   })
 }

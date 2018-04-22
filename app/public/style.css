@@ -161,7 +161,7 @@ button {
 }
 
 
-form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover, .register-button:hover, .search-choice:hover {
+form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover, .register-button:hover, .button-choice:hover {
   background: linear-gradient(#6298ef, white);
   color: black;
 }
@@ -178,7 +178,7 @@ form input {
   background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
-form button, .register-button, .search-choice {
+form button, .register-button, .button-choice {
   padding: 10px 50px;
   font-size: 20px;
   background: linear-gradient(lightblue, #fefefe);
@@ -235,7 +235,7 @@ form button, .register-button, .search-choice {
 
 }
 
-.search-choice {
+.button-choice {
   font-size: 30px;
   width: 45%;
 }

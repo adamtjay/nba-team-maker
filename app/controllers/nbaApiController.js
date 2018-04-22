@@ -1,4 +1,5 @@
 const nbaApiService = require('../services/nbaApiService');
+const nbaModel = require('../models/nbaModel');
 
 
 function getPlayerObjByName(req, res, next) {
@@ -42,6 +43,10 @@ function getPlayersFromTeamList(req, res, next) {
             // console.log('resPlayers: ' + resPlayers);
 
             res.locals.playerobjs = resPlayers; //change
+
+            // getting the team name from db, based on id
+            res.locals.teamname = nbaModel.getTeamName(req.params.id).then(data => res.send(data)).catch(err => console.log(err));
+
             next();
         })
         .catch(err => console.log(err));

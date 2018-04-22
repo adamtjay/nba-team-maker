@@ -29,7 +29,7 @@ function getNbaTeamsList(req, res, next) {
     console.log('* getTeamsList *');
     // console.log(data);
 
-    //**** temp main route, replace w viewController
+    //**** show the Search by Team form
     res.render('./nbaMaker/searchByTeam', {
       data: data
     });

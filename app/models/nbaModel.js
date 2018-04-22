@@ -20,8 +20,21 @@ function getTeamsList() {
     return queryP;
 }
 
+function getTeamName(id) {
+  const queryP = db.any(`
+    SELECT teamCity, teamName
+    FROM nbaTeams
+    WHERE nbaTeamId = $1
+    `, id);
+
+    console.log(queryP);
+    return Promise.resolve(queryP);
+}
+
+
 
 module.exports = {
   getAllPlayers,
-  getTeamsList
+  getTeamsList,
+  getTeamName
 }
