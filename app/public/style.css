@@ -51,7 +51,7 @@ button {
   background: linear-gradient(#edf2f9, white);
 }
 
-.player-info-list {
+/* .player-info-list {
   max-width: 50%;
   margin: 0 auto;
   padding: 15px 0px;
@@ -59,7 +59,7 @@ button {
   border-radius: 20px;
   margin-top: 20px;
   background: linear-gradient(#edf2f9, white);
-}
+} */
 
 .player-info-list-float:hover, .player-info:hover {
   background: linear-gradient(#9fc2f9, white);
@@ -68,13 +68,13 @@ button {
 
 .player-info-list-float {
   float: left;
-  max-width: 40%;
+  max-width: 50%;
   margin: 0 auto;
   padding: 10px 2px;
   border: 1px solid black;
   margin-left: 2%;
   border-radius: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
   background: linear-gradient(#edf2f9, white);
 }
 
@@ -84,7 +84,8 @@ button {
 }
 
 .player-info-list-title {
-  font-size: 22px;
+  margin: 0 auto;
+  font-size: 18px;
 }
 
 .player-info-list hr {
@@ -179,6 +180,15 @@ form button {
   background: rgba(255, 255, 255, 0.0)
 }
 
+.player-list-avatar {
+  width: 260px;
+  height: 190px;
+  margin-top: 2%;
+  border-radius: 20px;
+  /* background: linear-gradient(#edf2f9, white); */
+  background: rgba(255, 255, 255, 0.0)
+}
+
 .nba-com-link {
   font-size: 20px;
 }
@@ -195,7 +205,7 @@ form button {
 .view-player {
   margin-top: 1%;
   margin-bottom: 1%;
-  font-size: 25px;
+  font-size: 20px;
   padding: 12px 50px;
   border-radius: 20px;
   background: linear-gradient(lightblue, #fefefe);

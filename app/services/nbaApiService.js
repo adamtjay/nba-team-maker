@@ -31,7 +31,7 @@ function getPlayerObjsByTeam() {
 
 }
 
-/*function queryPlayersList(playersobj) {
+function queryPlayersList(playersobj) {
     // console.log('playersobj length: ' + playersobj.length);
     let newPlayerInfo = [];
 
@@ -55,7 +55,7 @@ function getPlayerObjsByTeam() {
     }
     console.log('newplayer arr: ' + newPlayerInfo);
     return newPlayerInfo;
-}    */
+}
 
 module.exports = {
   getPlayerObjByNameServ,

@@ -23,7 +23,7 @@
     </p>
 
     <p class="player-info-content">
-      <strong>PIE (Player Impact) Rating:</strong> <%= (player.playerHeadlineStats[0].pie)*100 %>%
+      <strong>PIE (Player Impact) Rating:</strong> <%= ((player.playerHeadlineStats[0].pie)*100).toFixed(2) %>%
       <br/><br/><strong>Position:</strong> <%= player.commonPlayerInfo[0].position %>
       <br/><strong>Height:</strong> <%= player.commonPlayerInfo[0].height %>
       <br/><strong>Weight:</strong> <%= player.commonPlayerInfo[0].weight %> lbs

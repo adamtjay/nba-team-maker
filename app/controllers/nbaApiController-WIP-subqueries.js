@@ -29,17 +29,31 @@ function getPlayerObjById(req, res, next) {
 
 function getPlayersFromTeamList(req, res, next) {
   const resPlayers = [];
-  console.log('req: ' + req.body.nbateamselect);
-  // nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect.data-api-id)
+  console.log('teamlist req: ' + req.body.nbateamselect);
   nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect)
           .then(data => {
             data.forEach(player => {
               if (player.teamId === parseInt(req.body.nbateamselect)) {
-                console.log(player);
-                resPlayers.push(player);
-                    };
-              });
-            // console.log('resPlayers: ' + resPlayers);
+                // console.log(player);
+                console.log(Promise.resolve(nbaApiService.getPlayerObjByIdServ(player.playerId)));
+                let playerdata = nbaApiService.getPlayerObjByIdServ(player.playerId)
+                .then(newdata => {
+                  resPlayers.push({
+                    player: newdata.data
+                  })
+                  // console.log(newdata);
+                }).catch(err=>console.log(err));
+                  // .then(data => {
+                  //   console.log(data);
+                  //   resPlayers.push(data);
+                  // }).catch(err => console.log(err));
+
+                  // resPlayers.push(playerdata);
+
+              };//end if
+
+            });//end forEach
+            console.log('resPlayers: ' + resPlayers);
 
             res.locals.playerobjs = resPlayers; //change
             next();
