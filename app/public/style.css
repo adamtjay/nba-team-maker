@@ -137,7 +137,7 @@ button {
 
 .add-to-team {
   margin-top: -2%;
-  font-size: 23px;
+  font-size: 30px;
   padding: 12px 80px;
   border-radius: 20px;
   /* background: linear-gradient(lightgrey, #fefefe); */
@@ -195,7 +195,7 @@ form button {
 .view-player {
   margin-top: 1%;
   margin-bottom: 1%;
-  font-size: 23px;
+  font-size: 25px;
   padding: 12px 50px;
   border-radius: 20px;
   background: linear-gradient(lightblue, #fefefe);

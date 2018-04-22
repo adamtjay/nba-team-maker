@@ -34,9 +34,12 @@ function getPlayersFromTeamList(req, res, next) {
   nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect)
           .then(data => {
             data.forEach(player => {
-              if (player.teamId === parseInt(req.body.nbateamselect)) { resPlayers.push(player)};
+              if (player.teamId === parseInt(req.body.nbateamselect)) {
+                console.log(player);
+                resPlayers.push(player);
+                    };
               });
-            // console.log('resPlayers: ' + resPlayers[0].firstName);
+            // console.log('resPlayers: ' + resPlayers);
 
             // nbaApiService.queryPlayersList(resPlayers);  // *** for querying API
 
