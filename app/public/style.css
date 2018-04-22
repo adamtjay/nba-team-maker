@@ -48,7 +48,7 @@ button {
   border: 1px solid black;
   border-radius: 20px;
   margin-top: 20px;
-  background: linear-gradient(#edf2f9, white);
+  background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
 /* .player-info-list {
@@ -75,7 +75,7 @@ button {
   margin-left: 2%;
   border-radius: 20px;
   margin-top: 30px;
-  background: linear-gradient(#edf2f9, white);
+  background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
 .player-info-title {
@@ -162,7 +162,7 @@ form input {
   font-size: 20px;
   border-radius: 20px;
   text-align: center;
-  background: linear-gradient(lightgrey, white);
+  background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
 form button {
@@ -196,10 +196,11 @@ form button {
 .nba-team-select {
   text-align: center;
   margin: 0 auto;
-  max-width: 70%;
+  width: 40%;
+  max-width: 90%;
   font-size: 30px;
   border-radius: 15px;
-  background: linear-gradient(lightblue, white);
+  background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
 .view-player {
@@ -210,4 +211,9 @@ form button {
   border-radius: 20px;
   background: linear-gradient(lightblue, #fefefe);
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
+}
+
+.search-teams {
+  font-size: 30px;
+  padding: 10px 100px;
 }

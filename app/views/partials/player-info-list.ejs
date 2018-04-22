@@ -1,8 +1,8 @@
 <div class="player-info-list-float">
 
-  <img class="player-list-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png">
+  <a href="/nba/player/<%= player.playerId %>"> <img class="player-list-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= player.playerId %>.png"></a>
 
-  <h3 class="player-info-list-title">  <%= player.firstName %> <%= player.lastName %> </h3>
+  <a href="/nba/player/<%= player.playerId %>" style="text-decoration:none;color:black;"> <h3 class="player-info-list-title">  <%= player.firstName %> <%= player.lastName %> </h3> </a>
   <hr/>
 
 
