@@ -1,0 +1,25 @@
+
+<% include ../partials/boilerplate %>
+
+<div class="pg-title-header">
+    <h1>Change Username ( <%= user %> )</h1>
+  </div>
+
+  <hr/><br/>
+
+  <br/>
+
+
+  <!-- <form class="login-main-form" action="/user/changeUsername/<%= user %>?_method=PUT" method="POST"> -->
+  <form class="login-main-form" action="/user/changeUsername/1?_method=PUT" method="POST">
+      <label>New Username: </label><input type="textarea" name="username"></input>
+      <br/><br/>
+      <label>Confirm: </label><input type="textarea" name="confirm-username"></input>
+      <br/><br/>
+      <label>Password (temp for PUT): </label><input type="textarea" name="password"></input> <br/><br/>
+<br/>
+      <button type="submit" class="button-choice">Update Username</button>
+    </form>
+
+
+  <% include ../partials/end %>

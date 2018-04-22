@@ -24,6 +24,7 @@ userRouter.post('/login', nbaViewController.redirectToHome, sendError); // ( * a
 userRouter.get('/register', userController.renderRegister, sendError);
 userRouter.post('/register', userController.createNewUser, nbaViewController.redirectToHome, sendError); // ***** add CREATE USER functions
 
-
+userRouter.get('/changeUsername', userController.renderUpdate, sendError);
+userRouter.put('/changeUsername/:id', userController.updateUsername, nbaViewController.redirectToHome, sendError);
 
 module.exports = userRouter;

@@ -12,7 +12,18 @@ function createUser(user) {
   return queryP;
 }
 
+function updateUserName(user) {       // obj has id attached in body
+  const queryP = db.one(`
+    UPDATE users
+    SET username = $/username/, password = $/password/
+    WHERE userid = $/userid/
+    RETURNING *
+    `, user
+  );
+  return queryP;
+}
 
 module.exports = {
-  createUser
+  createUser,
+  updateUserName
 }
