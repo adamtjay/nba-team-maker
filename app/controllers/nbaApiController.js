@@ -29,12 +29,12 @@ function getPlayerObjById(req, res, next) {
 
 function getPlayersFromTeamList(req, res, next) {
   const resPlayers = [];
-  console.log('req: ' + req.body.nbateamselect);
+  console.log('req: ' + req.params.id);
   // nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect.data-api-id)
-  nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect)
+  nbaApiService.getPlayerObjsByTeam(req.params.id)
           .then(data => {
             data.forEach(player => {
-              if (player.teamId === parseInt(req.body.nbateamselect)) {
+              if (player.teamId === parseInt(req.params.id)) {
                 console.log(player);
                 resPlayers.push(player);
                     };

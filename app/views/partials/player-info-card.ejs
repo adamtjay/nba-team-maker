@@ -39,8 +39,12 @@
 <br/><br/>
 <!-- <a href="https://stats.nba.com/player/<%= player.commonPlayerInfo[0].personId %>" target="_blank"><strong>View NBA.com Player Stats</strong></a> -->
 <hr/>
-<a href="/nba/searchByName">Back to Search</a>
+<a href="/nba/team/<%= player.commonPlayerInfo[0].teamId %>">View all <%= player.commonPlayerInfo[0].teamCity %> <%= player.commonPlayerInfo[0].teamName %></a>
+<br/><br/>
+<a href="/nba/searchByName">Search again by player name</a>
 <br/>
+<a href="/nba/searchByTeam">Search again by team</a>
+
 
 <hr/><br/>
 

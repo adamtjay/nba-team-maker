@@ -26,7 +26,11 @@ nbaRouter.post('/searchByName', nbaApiController.getPlayerObjByName, nbaViewCont
 nbaRouter.get('/player/:id', nbaApiController.getPlayerObjById, nbaViewController.goToSearchResults, sendError);
 
 nbaRouter.get('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
-nbaRouter.post('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
+nbaRouter.post('/searchByTeam', nbaViewController.redirectToTeamInfo, sendError);
+// nbaRouter.post('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
+
+//test
+nbaRouter.get('/team/:id', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
 
 nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
 nbaRouter.get('/new', sendError);
