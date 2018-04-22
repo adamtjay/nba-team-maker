@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
+  background: linear-gradient(white, #dee8f9);
 }
 
 .nav-bar a:hover {
