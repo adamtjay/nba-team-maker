@@ -27,7 +27,7 @@
       <br/><br/><strong>Position:</strong> <%= player.commonPlayerInfo[0].position %>
       <br/><strong>Height:</strong> <%= player.commonPlayerInfo[0].height %>
       <br/><strong>Weight:</strong> <%= player.commonPlayerInfo[0].weight %> lbs
-      <br/><strong>Drafted:</strong> <%= player.commonPlayerInfo[0].draftYear %> (Round: <%= player.commonPlayerInfo[0].draftRound %>, Pick#: <%= player.commonPlayerInfo[0].draftNumber %>)
+      <br/><strong>Drafted:</strong> <%= player.commonPlayerInfo[0].draftYear %> <% if ( player.commonPlayerInfo[0].draftYear != 'Undrafted') { %> (Round: <%= player.commonPlayerInfo[0].draftRound %>, Pick#: <%= player.commonPlayerInfo[0].draftNumber %>)  <% } %>
     </p>
 
     <a class="nba-com-link" href="https://stats.nba.com/player/<%= player.commonPlayerInfo[0].personId %>" target="_blank"><strong>More Stats on NBA.com</strong></a>
