@@ -1,10 +1,3 @@
-function renderLogin(req, res) {
-    res.render('nbaMaker/login', {
-    // data: data
-    data: "This is where the login goes"
-      });
-    }
-
 function renderHome(req, res) {
     res.render('nbaMaker/home', {
       data: "placeholder data"
@@ -15,12 +8,6 @@ function renderSearch(req, res) {
   res.render('nbaMaker/search', {
     data: "placeholder data"
   });
-}
-
-function renderRegister(req, res) {
-    res.render('nbaMaker/register', {
-      data: "placeholder data"
-    });
 }
 
 function renderPlayerSearch(req, res) {
@@ -75,7 +62,6 @@ function redirectToTeamInfo(req, res) {
 
 
 module.exports = {
-  renderLogin,
   renderPlayerSearch,
   renderSearchResults,
   renderTeamSearchForm,
@@ -83,8 +69,7 @@ module.exports = {
   redirectToLogin,
   redirectToPlayerInfo,
   redirectToTeamInfo,
-  renderHome,
-  renderRegister,
   redirectToHome,
-  renderSearch
+  renderSearch,
+  renderHome
 }

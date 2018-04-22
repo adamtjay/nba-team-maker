@@ -35,13 +35,6 @@ nbaRouter.post('/searchByTeam', nbaViewController.redirectToTeamInfo, sendError)
 
 nbaRouter.get('/team/:id', nbaApiController.getPlayersFromTeamList, nbaViewController.renderTeamSearchResults, sendError);
 
-nbaRouter.get('/login', nbaViewController.renderLogin, sendError);
-nbaRouter.post('/login', nbaViewController.renderHome, sendError); // ( * add auth functions )
-
-//testing
-nbaRouter.get('/register', nbaViewController.renderRegister, sendError);
-nbaRouter.post('/register', nbaViewController.renderHome, sendError); // ***** add CREATE USER functions
-
 nbaRouter.get('/new', sendError);
 nbaRouter.get('/:id/update', sendError);
 
