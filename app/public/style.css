@@ -6,7 +6,7 @@ body {
   letter-spacing: 1px;
 }
 
-a:hover {
+.nav-bar a:hover {
   background: blue;
   color: white;
   padding: 5px 15px;
@@ -102,7 +102,11 @@ button {
 }
 
 .player-info-content {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.player-info-content-headline {
+  font-size: 28px;
 }
 
 .nav-bar {
@@ -134,7 +138,7 @@ button {
 .add-to-team {
   margin-top: -2%;
   font-size: 23px;
-  padding: 12px 50px;
+  padding: 12px 80px;
   border-radius: 20px;
   /* background: linear-gradient(lightgrey, #fefefe); */
   /* border: 1px solid black; */
@@ -143,7 +147,7 @@ button {
 }
 
 
-form button:hover, .add-to-team:hover, form input:hover, select:hover {
+form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover {
   background: linear-gradient(#6298ef, white);
   color: black;
 }
@@ -186,4 +190,14 @@ form button {
   font-size: 30px;
   border-radius: 15px;
   background: linear-gradient(lightblue, white);
+}
+
+.view-player {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 23px;
+  padding: 12px 50px;
+  border-radius: 20px;
+  background: linear-gradient(lightblue, #fefefe);
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
 }

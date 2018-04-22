@@ -15,20 +15,6 @@ function getPlayerObjByIdServ(id) {
   return NBA.stats.playerInfo({ PlayerID: resId });
 }
 
-// function getPlayerObjsByTeam(teamid) {
-//       const resPlayers = [];
-//
-//       NBA.stats.playersInfo({ Season: '2017-18' })
-//         .then(data => {
-//           data.forEach(player => {
-//             if (player.teamId === parseInt(teamid)) { resPlayers.push(player)};
-//             });
-//           console.log('resPlayers: ' + resPlayers[0].firstName);
-//           return resPlayers;
-//       })
-//       .catch(err => console.log(err));
-//     }
-
 function getPlayerObjsByTeam() {
           // return NBA.stats.playersInfo({ Season: '2017-18' });
           const resPlayers = NBA.stats.playersInfo({ Season: '2017-18' });
