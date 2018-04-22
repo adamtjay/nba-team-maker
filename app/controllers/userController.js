@@ -1,3 +1,5 @@
+const userModel = require('../models/userModel');
+
 function renderUserProfilePage(req, res, next) {
   res.render('user/user-profile', {
     data: "placeholder data"     //might need change
@@ -17,9 +19,20 @@ function renderRegister(req, res) {
     });
 }
 
+function createNewUser(req, res, next) {
+  console.log(req.body);
+  userModel.createUser(req.body)
+  .then(data => {
+    console.log(data);
+    res.locals.user = data;
+    next();
+  }).catch(err => next(err));
+}
+
 
 module.exports = {
   renderUserProfilePage,
   renderLogin,
-  renderRegister
+  renderRegister,
+  createNewUser
 }

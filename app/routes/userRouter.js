@@ -22,7 +22,7 @@ userRouter.get('/login', userController.renderLogin, sendError);
 userRouter.post('/login', nbaViewController.redirectToHome, sendError); // ( * add auth functions )
 
 userRouter.get('/register', userController.renderRegister, sendError);
-userRouter.post('/register', nbaViewController.redirectToHome, sendError); // ***** add CREATE USER functions
+userRouter.post('/register', userController.createNewUser, nbaViewController.redirectToHome, sendError); // ***** add CREATE USER functions
 
 
 
