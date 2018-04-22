@@ -1,0 +1,24 @@
+
+<% include ../partials/boilerplate %>
+
+<div class="pg-title-header">
+    <h1>Register New User</h1>
+  </div>
+
+  <hr/><br/>
+
+  <!-- <p> <%= data %> </p> -->
+  <br/>
+
+
+  <form class="login-main-form" action="/nba/register" method="POST">
+      <label>Username: </label><input type="textarea" name="username"></input>
+      <br/><br/>
+      <label>Password: </label><input type="password" name="password"></input>
+      <br/><br/>
+      <button type="submit" class="register">Sign Up</button>
+      <br/><br/>
+  </form>
+
+
+  <% include ../partials/end %>

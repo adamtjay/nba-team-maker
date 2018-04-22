@@ -17,22 +17,31 @@ function sendError(err, req, res, next) {
 
 
 nbaRouter.route('/')
-  .get(nbaViewController.redirectToLogin, sendError)
+  .get(nbaViewController.redirectToHome, sendError)
   .post(sendError);
 
-nbaRouter.get('/searchByName', nbaViewController.goToPlayerSearch, sendError);
+nbaRouter.get('/home', nbaViewController.renderHome, sendError);
+
+nbaRouter.get('/searchByName', nbaViewController.renderPlayerSearch, sendError);
 nbaRouter.post('/searchByName', nbaApiController.getPlayerObjByName, nbaViewController.redirectToPlayerInfo, sendError);
 
-nbaRouter.get('/player/:id', nbaApiController.getPlayerObjById, nbaViewController.goToSearchResults, sendError);
+nbaRouter.get('/player/:id', nbaApiController.getPlayerObjById, nbaViewController.renderSearchResults, sendError);
 
-nbaRouter.get('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.goToTeamSearchForm, sendError);
+nbaRouter.get('/search', nbaViewController.renderSearch, sendError);
+
+nbaRouter.get('/searchByTeam', nbaController.getNbaTeamsList, nbaViewController.renderTeamSearchForm, sendError);
 nbaRouter.post('/searchByTeam', nbaViewController.redirectToTeamInfo, sendError);
-// nbaRouter.post('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
+// nbaRouter.post('/searchByTeam', nbaApiController.getPlayersFromTeamList, nbaViewController.renderTeamSearchResults, sendError);
 
-//test
-nbaRouter.get('/team/:id', nbaApiController.getPlayersFromTeamList, nbaViewController.goToTeamSearchResults, sendError);
+nbaRouter.get('/team/:id', nbaApiController.getPlayersFromTeamList, nbaViewController.renderTeamSearchResults, sendError);
 
-nbaRouter.get('/login', nbaViewController.goToLogin, sendError);
+nbaRouter.get('/login', nbaViewController.renderLogin, sendError);
+nbaRouter.post('/login', nbaViewController.renderHome, sendError); // ( * add auth functions )
+
+//testing
+nbaRouter.get('/register', nbaViewController.renderRegister, sendError);
+nbaRouter.post('/register', nbaViewController.renderHome, sendError); // ***** add CREATE USER functions
+
 nbaRouter.get('/new', sendError);
 nbaRouter.get('/:id/update', sendError);
 

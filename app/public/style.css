@@ -5,6 +5,7 @@ body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   background: linear-gradient(white, #dee8f9);
+  /* background: linear-gradient(#dee8f9, white); */
 }
 
 .nav-bar a:hover {
@@ -34,6 +35,10 @@ button {
   font-size: 28px;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+
+.main-logo:hover {
+  background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
 .main-logo a {
@@ -77,6 +82,13 @@ button {
   border-radius: 20px;
   margin-top: 30px;
   background: linear-gradient(to bottom right, white, #b1ccf9);
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  height: 20px;
+  margin-bottom: 200px;
 }
 
 .player-info-title {
@@ -149,7 +161,7 @@ button {
 }
 
 
-form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover {
+form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover, .register-button:hover, .search-choice:hover {
   background: linear-gradient(#6298ef, white);
   color: black;
 }
@@ -166,7 +178,7 @@ form input {
   background: linear-gradient(to bottom right, white, #b1ccf9);
 }
 
-form button {
+form button, .register-button, .search-choice {
   padding: 10px 50px;
   font-size: 20px;
   background: linear-gradient(lightblue, #fefefe);
@@ -217,4 +229,18 @@ form button {
 .search-teams {
   font-size: 30px;
   padding: 10px 100px;
+}
+
+.register-button {
+
+}
+
+.search-choice {
+  font-size: 30px;
+  width: 45%;
+}
+
+.home-icon-img {
+  width: 5%;
+  height: 10%;
 }

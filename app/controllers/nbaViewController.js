@@ -1,35 +1,60 @@
-function goToLogin(req, res) {
+function renderLogin(req, res) {
     res.render('nbaMaker/login', {
     // data: data
     data: "This is where the login goes"
       });
     }
 
-function goToPlayerSearch(req, res) {
+function renderHome(req, res) {
+    res.render('nbaMaker/home', {
+      data: "placeholder data"
+    });
+}
+
+function renderSearch(req, res) {
+  res.render('nbaMaker/search', {
+    data: "placeholder data"
+  });
+}
+
+function renderRegister(req, res) {
+    res.render('nbaMaker/register', {
+      data: "placeholder data"
+    });
+}
+
+function renderPlayerSearch(req, res) {
   res.render('nbaMaker/searchByName', {
    data: "data placeholder"
     // data: res.locals.playerid
   });
 }
 
-function goToSearchResults(req, res, next) {
+function renderSearchResults(req, res, next) {
   res.render('nbaMaker/playerSearchResults', {
     player: res.locals.playerobj
   });
 }
 
-function goToTeamSearchForm(req, res, next) {
+function renderTeamSearchForm(req, res, next) {
   res.render('nbaMaker/searchByTeam', {
     data: data     //might need change
   })
 }
 
-function goToTeamSearchResults(req, res, next) {
-  // console.log('in gototeamsearchresults: ' + data)
+function renderTeamSearchResults(req, res, next) {
+  // console.log('in renderteamsearchresults: ' + data)
   res.render('nbaMaker/teamSearchResults', {
     players: res.locals.playerobjs
     // players: data
   })
+}
+
+//redirects
+
+function redirectToHome(req, res) {
+  console.log('redirecting to /home/');
+  res.redirect(`/nba/home`);
 }
 
 function redirectToLogin(req, res) {
@@ -49,12 +74,16 @@ function redirectToTeamInfo(req, res) {
 
 
 module.exports = {
-  goToLogin,
-  goToPlayerSearch,
-  goToSearchResults,
-  goToTeamSearchForm,
-  goToTeamSearchResults,
+  renderLogin,
+  renderPlayerSearch,
+  renderSearchResults,
+  renderTeamSearchForm,
+  renderTeamSearchResults,
   redirectToLogin,
   redirectToPlayerInfo,
-  redirectToTeamInfo
+  redirectToTeamInfo,
+  renderHome,
+  renderRegister,
+  redirectToHome,
+  renderSearch
 }
