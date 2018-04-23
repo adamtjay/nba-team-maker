@@ -4,13 +4,15 @@ const userController = require('../controllers/userController');
 
 /* public routes */
 
-authRouter.route('/login')
-  .get()
-
-authRouter.route('/register')
-
-
-authRouter.get('/logout', AuthService.logout, ViewController.handleLogout);
+// authRouter.route('/login')
+//   .get(ViewController.showLoginForm)
+//   .post(AuthService.login, ViewController.handleCreateUser);
+//
+// authRouter.route('/register')
+//   .get(ViewController.showRegisterForm)
+//   .post(UserController.create, AuthService.login, ViewController.handleCreateUser);
+//
+// authRouter.get('/logout', AuthService.logout, ViewController.handleLogout);
 
 /* Error handler */
 authRouter.use((err, req, res, next) => {

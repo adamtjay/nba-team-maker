@@ -130,6 +130,19 @@ button {
 
 .nav-holder {
   margin-top: 1.5%;
+  
+  display: flex;
+  /* min-height: 100vh; */
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+}
+
+ @media only screen and (min-width < 700px) {
+    .nav-holder {
+        flex-direction: column;
+        flex: 1;
+    }
 }
 
 .nav-item {

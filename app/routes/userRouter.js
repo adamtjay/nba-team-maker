@@ -18,6 +18,7 @@ userRouter.route('/')
 
 userRouter.get('/profile', userController.renderUserProfilePage, sendError);
 
+//later should use authRouter for login & register instead
 userRouter.get('/login', userController.renderLogin, sendError);
 userRouter.post('/login', nbaViewController.redirectToHome, sendError); // ( * add auth functions )
 
