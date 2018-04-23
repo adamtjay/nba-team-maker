@@ -39,7 +39,7 @@ function getPlayersFromTeamList(req, res, next) {
                 let playerdata = nbaApiService.getPlayerObjByIdServ(player.playerId)
                 .then(newdata => {
                   resPlayers.push({
-                    player: newdata.data
+                    player: newdata
                   })
                   // console.log(newdata);
                 }).catch(err=>console.log(err));
