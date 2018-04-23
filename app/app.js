@@ -13,7 +13,7 @@ const app = express();
 
 const nbaRouter = require('./routes/nbaRouter');
 const userRouter = require('./routes/userRouter');
-
+const customTeamsRouter = require('./routes/customTeamsRouter');
 
 // ***  Middleware
 app.use(logger('dev')); // Log request info to console
@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
 // *** Routers
 app.use('/nba', nbaRouter);
 app.use('/user', userRouter);
+app.use('/customTeams', customTeamsRouter);
 
 
 // Listen on PORT
