@@ -1,4 +1,4 @@
-\c nba_app_db
+-- \c nba_app_db
 
 --DELETE FROM nbaTeams;
 

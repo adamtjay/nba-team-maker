@@ -1,4 +1,4 @@
-\c nba_app_db
+-- \c nba_app_db
 
 DROP TABLE IF EXISTS customTeams CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
