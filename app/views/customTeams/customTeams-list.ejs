@@ -15,7 +15,7 @@
   <% data.forEach(team => {  %>
 
   <a href="/customTeams/<%= team.customteamid %>" style="text-decoration:none;">
-       <h3> <%= team.customteamname %> (ID: <%= team.customteamid %>) </h3>
+       <h2> <%= team.customteamname %> (OwnerID: <%= team.customteamowner %>, TeamID: <%= team.customteamid %>) </h3>
      </a>
 
 
