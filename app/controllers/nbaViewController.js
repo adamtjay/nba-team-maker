@@ -65,6 +65,11 @@ function redirectToTeamInfo(req, res) {
   res.redirect(`/nba/team/${req.body.nbateamselect}`)
 }
 
+function redirectToCustomTeams(req, res) {
+  console.log('redirecting to /customTeams');
+  res.redirect(`/customTeams`)
+}
+
 
 module.exports = {
   renderPlayerSearch,
@@ -77,5 +82,6 @@ module.exports = {
   redirectToHome,
   renderSearch,
   renderHome,
-  redirectToSearch
+  redirectToSearch,
+  redirectToCustomTeams
 }

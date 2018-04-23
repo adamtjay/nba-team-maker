@@ -47,17 +47,18 @@ function addToTeam(req, res, next) {
 
   // console.log(res.locals.playerobj.commonPlayerInfo[0].personId);
 
-  const playerObject = {
-    firstName: res.locals.playerobj.commonPlayerInfo[0].firstName,
-    lastName: res.locals.playerobj.commonPlayerInfo[0].lastName,
-    fullName: res.locals.playerobj.commonPlayerInfo[0].displayFirstLast,
-    points: res.locals.playerobj.playerHeadlineStats[0].pts,
-    rebounds: res.locals.playerobj.playerHeadlineStats[0].reb,
-    assists: res.locals.playerobj.playerHeadlineStats[0].ast,
-    impactRating: res.locals.playerobj.playerHeadlineStats[0].pie,
-    apiId: res.locals.playerobj.commonPlayerInfo[0].personId,
-    customTeamId: res.locals.customTeamId
-  }
+      //custom object for passing to sql
+      const playerObject = {
+        firstName: res.locals.playerobj.commonPlayerInfo[0].firstName,
+        lastName: res.locals.playerobj.commonPlayerInfo[0].lastName,
+        fullName: res.locals.playerobj.commonPlayerInfo[0].displayFirstLast,
+        points: res.locals.playerobj.playerHeadlineStats[0].pts,
+        rebounds: res.locals.playerobj.playerHeadlineStats[0].reb,
+        assists: res.locals.playerobj.playerHeadlineStats[0].ast,
+        impactRating: res.locals.playerobj.playerHeadlineStats[0].pie,
+        apiId: res.locals.playerobj.commonPlayerInfo[0].personId,
+        customTeamId: res.locals.customTeamId
+      }
 
   // console.log('playerobject2: ' + res.locals.playerobj.commonPlayerInfo[0].firstName);
 
