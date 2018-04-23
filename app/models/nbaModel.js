@@ -36,8 +36,8 @@ function addPlayerToTeam(player) {
     // console.log('player: ');
     // console.log(player);
   const queryP = db.one(`
-    INSERT INTO players (firstName, lastName, fullName, points, rebounds, assists, impactRating, customTeamId)
-    VALUES ($/firstName/, $/lastName/, $/fullName/, $/points/, $/rebounds/, $/assists/, $/impactRating/, $/customTeamId/)
+    INSERT INTO players (firstName, lastName, fullName, points, rebounds, assists, impactRating, apiId, customTeamId)
+    VALUES ($/firstName/, $/lastName/, $/fullName/, $/points/, $/rebounds/, $/assists/, $/impactRating/, $/apiId/, $/customTeamId/)
     RETURNING *
     `, player
   ).catch(err => console.log(err));

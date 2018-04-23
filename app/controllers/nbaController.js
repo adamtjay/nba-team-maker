@@ -45,6 +45,8 @@ function addToTeam(req, res, next) {
 
   res.locals.customTeamId = 1;   // TEMPORARILY set custom team ID
 
+  // console.log(res.locals.playerobj.commonPlayerInfo[0].personId);
+
   const playerObject = {
     firstName: res.locals.playerobj.commonPlayerInfo[0].firstName,
     lastName: res.locals.playerobj.commonPlayerInfo[0].lastName,
@@ -53,6 +55,7 @@ function addToTeam(req, res, next) {
     rebounds: res.locals.playerobj.playerHeadlineStats[0].reb,
     assists: res.locals.playerobj.playerHeadlineStats[0].ast,
     impactRating: res.locals.playerobj.playerHeadlineStats[0].pie,
+    apiId: res.locals.playerobj.commonPlayerInfo[0].personId,
     customTeamId: res.locals.customTeamId
   }
 

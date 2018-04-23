@@ -6,7 +6,7 @@
 
 
 <div class="pg-title-header">
-    <h1>Customs Teams</h1>
+    <h1>Custom Teams</h1>
   </div>
 
   <hr/> <br/>
@@ -14,7 +14,9 @@
 
   <% data.forEach(team => {  %>
 
-  <p> <%= team.customteamname %> (ID: <%= team.customteamid %>) </p>
+  <a href="/customTeams/<%= team.customteamid %>" style="text-decoration:none;">
+       <h3> <%= team.customteamname %> (ID: <%= team.customteamid %>) </h3>
+     </a>
 
 
   <% }); %>

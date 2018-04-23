@@ -13,13 +13,31 @@ function getCustomTeamsList(req, res, next) {
 
       })
       .catch(err => {
-        console.log('getAll catch error detected');
+        console.log(err);
         next(err);
 
     })
 }
 
+function getPlayersOnTeamList(req, res, next) {
+  teamsModel.getPlayersList(req.params.id)
+    .then(data => {
+
+        res.render('customTeams/viewCustomTeam', {
+          data: data
+        })
+
+        next();
+
+    })
+    .catch(err => {
+      console.log(err);
+      next(err);
+    })
+}
+
 module.exports = {
-  getCustomTeamsList
+  getCustomTeamsList,
+  getPlayersOnTeamList
 
 }

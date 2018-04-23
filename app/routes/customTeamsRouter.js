@@ -16,4 +16,7 @@ customTeamsRouter.route('/')
   .get(customTeamsController.getCustomTeamsList, sendError)
   .post(sendError);
 
+customTeamsRouter.get('/:id', customTeamsController.getPlayersOnTeamList, sendError);
+
+
 module.exports = customTeamsRouter;

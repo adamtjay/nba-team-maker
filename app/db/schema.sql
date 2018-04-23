@@ -16,6 +16,7 @@ CREATE TABLE players (
   assists DECIMAL(10, 2),
   impactRating DECIMAL(10, 2),
   -- teamTableId INT REFERENCES nbaTeams(teamTableId),
+  apiId TEXT,
   customTeamId INT
 );
 
