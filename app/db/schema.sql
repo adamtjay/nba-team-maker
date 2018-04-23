@@ -15,7 +15,7 @@ CREATE TABLE players (
   rebounds INT,
   assists INT,
   impactRating INT,
-  teamTableId INT REFERENCES nbaTeams(teamTableId),
+  -- teamTableId INT REFERENCES nbaTeams(teamTableId),
   customTeamId INT
 );
 

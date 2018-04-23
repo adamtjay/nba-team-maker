@@ -31,10 +31,22 @@ function getTeamName(id) {
     return Promise.resolve(queryP);
 }
 
+//add player to team, needs customTeamID attached to body
+function addPlayerToTeam(player) {
+  const queryP = db.one(`
+    INSERT INTO players (firstName, lastName, fullName, points, rebounds, assists, impactRating, customTeamId)
+    VALUES ($/firstName/, $/lastName/, $/playerName/, $/pts/, $/reb/, $/ast/, $/pie/, $/customTeamId/)
+    RETURNING *
+    `, player
+  ).catch(err => console.log(err));
+  return queryP;
+}
+
 
 
 module.exports = {
   getAllPlayers,
   getTeamsList,
-  getTeamName
+  getTeamName,
+  addPlayerToTeam
 }
