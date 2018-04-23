@@ -11,10 +11,10 @@ CREATE TABLE players (
   firstName VARCHAR(255),
   lastName VARCHAR(255),
   fullName VARCHAR(500),
-  points INT,
-  rebounds INT,
-  assists INT,
-  impactRating INT,
+  points DECIMAL(10, 2),
+  rebounds DECIMAL(10, 2),
+  assists DECIMAL(10, 2),
+  impactRating DECIMAL(10, 2),
   -- teamTableId INT REFERENCES nbaTeams(teamTableId),
   customTeamId INT
 );

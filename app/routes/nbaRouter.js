@@ -35,7 +35,7 @@ nbaRouter.post('/searchByTeam', nbaViewController.redirectToTeamInfo, sendError)
 
 nbaRouter.get('/team/:id', nbaApiController.getPlayersFromTeamList, nbaViewController.renderTeamSearchResults, sendError);
 
-nbaRouter.get('/addToTeam/:id', nbaApiController.getPlayerObjById, nbaController.addToTeam, nbaViewController.redirectToPlayerInfo, sendError)
+nbaRouter.get('/addToTeam/:id', nbaApiController.getPlayerObjById, nbaController.addToTeam, nbaViewController.redirectToSearch, sendError)
 
 nbaRouter.get('/new', sendError);
 nbaRouter.get('/:id/update', sendError);
