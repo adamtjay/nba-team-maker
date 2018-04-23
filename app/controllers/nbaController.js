@@ -63,16 +63,16 @@ function addToTeam(req, res, next) {
   // console.log('playerobject2: ' + res.locals.playerobj.commonPlayerInfo[0].firstName);
 
 
-  nbaDb.addPlayerToTeam(playerObject)
-    .then(data => {
-      console.log(' * addToTeam * ');
+    nbaDb.addPlayerToTeam(playerObject) //send custom player obj to sql
+      .then(data => {
+        console.log(' * addToTeam * ');
 
-      console.log(data);
-      // res.locals.playerobj = data;
-      next();
+        console.log(data);
+        // res.locals.playerobj = data;
+        next();
 
-    })
-}
+      })
+  }
 
 module.exports = {
   getPlayers,
