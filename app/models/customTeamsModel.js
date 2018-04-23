@@ -24,7 +24,7 @@ function getTeamsList() {
 function getPlayersList(id) {
   const queryP = db.any(`
     SELECT *
-    FROM customTeams
+    FROM players
     WHERE customteamid = $1
     `, id).catch(err => console.log(err));
 

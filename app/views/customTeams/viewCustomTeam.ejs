@@ -4,23 +4,17 @@
 
 <% include ../partials/boilerplate %>
 
-<% data.forEach(team => {  %>
 
 
 <div class="pg-title-header">
-    <h3>Custom Team:</h3>
-    <h2> <%= team.customteamname %> </h2>
+    <h3>View Custom Team</h3>
   </div>
 
   <hr/>
 
+  <% data.forEach(team => {  console.log(team) %>
 
-
-    <a href="/nba/player/<%= team.playerone %>"> <h3> Player 1: ID#<%= team.playerone %> </h3> </a>
-    <a href="/nba/player/<%= team.playertwo %>"> <h3> Player 2: ID#<%= team.playertwo %> </h3> </a>
-    <a href="/nba/player/<%= team.playerthree %>"> <h3> Player 3: ID#<%= team.playerthree %> </h3> </a>
-    <a href="/nba/player/<%= team.playerfour %>"> <h3> Player 4: ID#<%= team.playerfour %> </h3> </a>
-    <a href="/nba/player/<%= team.playerfive %>"> <h3> Player 5: ID#<%= team.playerfive %> </h3> </a>
+    <a href="/nba/player/<%= team.apiid %>"> <h3> <%= team.firstname %> <%= team.lastname %> ( ID#<%= team.apiid %> ) </h3> </a>
 
 
   <% }); %>
