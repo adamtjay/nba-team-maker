@@ -14,7 +14,7 @@
 
   <% data.forEach(team => {  console.log(team) %>
 
-    <a href="/nba/player/<%= team.apiid %>"> <h3> <%= team.firstname %> <%= team.lastname %> ( ID#<%= team.apiid %> ) </h3> </a>
+    <% include ../partials/player-info-customteams-list %>
 
 
   <% }); %>
