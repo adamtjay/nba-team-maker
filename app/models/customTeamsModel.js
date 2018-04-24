@@ -31,7 +31,17 @@ function getPlayersList(id) {
     return queryP;
 }
 
+function removePlayer(id) {
+  const queryP = db.none(`
+    DELETE FROM players
+    WHERE apiId = $1
+    `, id).catch(err => console.log(err));
+
+    return queryP;
+}
+
 module.exports = {
   getTeamsList,
-  getPlayersList
+  getPlayersList,
+  removePlayer
 }

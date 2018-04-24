@@ -36,8 +36,16 @@ function getPlayersOnTeamList(req, res, next) {
     })
 }
 
+function removeCustomPlayer(req, res, next) {
+    teamsModel.removePlayer(req.params.id)
+      .then(() => {
+        next();
+      }).catch(err => console.log(err));
+}
+
 module.exports = {
   getCustomTeamsList,
-  getPlayersOnTeamList
+  getPlayersOnTeamList,
+  removeCustomPlayer
 
 }

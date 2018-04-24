@@ -18,5 +18,7 @@ customTeamsRouter.route('/')
 
 customTeamsRouter.get('/:id', customTeamsController.getPlayersOnTeamList, sendError);
 
+customTeamsRouter.get('/removePlayer/:id', customTeamsController.removeCustomPlayer, nbaViewController.redirectToCustomTeams, sendError);
+
 
 module.exports = customTeamsRouter;
