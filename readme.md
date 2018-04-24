@@ -42,7 +42,6 @@ function getPlayerObjByNameServ(name) {
 function getPlayersFromTeamList(req, res, next) {
   const resPlayers = [];
   console.log('req: ' + req.params.id);
-  // nbaApiService.getPlayerObjsByTeam(req.body.nbateamselect.data-api-id)
   nbaApiService.getPlayerObjsByTeam(req.params.id)
           .then(data => {
             data.forEach(player => {
