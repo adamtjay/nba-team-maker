@@ -20,7 +20,7 @@ button {
 }
 
 .main-container {
-  max-width: 90%;
+  max-width: 97%;
   margin: 0 auto;
 }
 
@@ -73,12 +73,16 @@ button {
 }
 
 .player-info-list-float {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   float: left;
   max-width: 50%;
   margin: 0 auto;
   padding: 10px 2px;
   border: 1px solid black;
-  margin-left: 2%;
+  margin-left: 3%;
   border-radius: 20px;
   margin-top: 30px;
   background: linear-gradient(to bottom right, white, #b1ccf9);
@@ -269,4 +273,24 @@ form button, .register-button, .button-choice {
 
 .customTeamStats h4 {
   padding: 3px 30px;
+}
+
+.customteam-content {
+  margin-top:-3%
+}
+
+.custom-player-list-avatar {
+  margin-top: 2%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.0);
+  max-height:150px;
+  max-width:200px
+}
+
+.searchres-container {
+  margin-left: 4%;
+}
+
+.customsearchres-container {
+  margin-left: 3%;
 }

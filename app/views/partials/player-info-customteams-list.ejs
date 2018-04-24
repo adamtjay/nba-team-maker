@@ -1,12 +1,12 @@
 <div class="player-info-list-float">
 
-  <a href="/nba/player/<%= team.apiid %>"> <img class="player-list-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= team.apiid %>.png"></a>
+  <a href="/nba/player/<%= team.apiid %>"> <img class="custom-player-list-avatar" src="http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/<%= team.apiid %>.png"></a>
 
   <a href="/nba/player/<%= team.apiid %>" style="text-decoration:none;"> <h3 class="player-info-list-title">  <%= team.firstname %> <%= team.lastname %> </h3> </a>
   <hr/>
 
 
-    <p>
+    <p class="customteam-content">
       Points: <%= team.points %> <br/>
       Assists: <%= team.assists %> <br/>
       Rebounds: <%= team.rebounds %> <br/>
