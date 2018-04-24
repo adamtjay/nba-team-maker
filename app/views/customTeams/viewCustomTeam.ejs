@@ -5,14 +5,33 @@
 <% include ../partials/boilerplate %>
 
 
-
 <div class="pg-title-header">
     <h3>View Custom Team</h3>
   </div>
 
-  <hr/>
+  <hr/><br/>
 
-  <% data.forEach(team => {  console.log(team) %>
+  <% let pointSum = 0; let reboundSum = 0; let assistSum = 0; let ratingAvg = 0; %>
+
+  <% data.forEach(team => {  //console.log(team) %>
+
+      <% pointSum += parseFloat(team.points) %>
+      <% reboundSum += parseFloat(team.rebounds) %>
+      <% assistSum += parseFloat(team.assists) %>
+      <% ratingAvg += parseFloat(team.impactrating) %>
+
+    <% }); %>
+
+    <div class="customTeamStats">
+        <h4>Total PPG: <%= parseInt(pointSum) %> </h4>
+        <h4>Total RPG: <%= parseInt(reboundSum) %> </h4>
+        <h4> Total APG: <%= parseInt(assistSum) %> </h4>
+        <h4>Average Player Impact Rating: <%= ((ratingAvg/data.length)*100).toFixed(2) %>% </h4>
+    </div>
+
+
+
+    <% data.forEach(team => {  //console.log(team) %>
 
     <% include ../partials/player-info-customteams-list %>
 

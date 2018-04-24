@@ -130,7 +130,7 @@ button {
 
 .nav-holder {
   margin-top: 1.5%;
-  
+
   display: flex;
   /* min-height: 100vh; */
   flex-direction: row;
@@ -256,4 +256,16 @@ form button, .register-button, .button-choice {
 .home-icon-img {
   width: 5%;
   height: 10%;
+}
+
+.customTeamStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.customTeamStats h4 {
+  padding: 3px 30px;
 }
