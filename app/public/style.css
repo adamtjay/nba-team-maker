@@ -9,9 +9,9 @@ body {
 }
 
 .nav-bar a:hover {
-  background: blue;
+  background: linear-gradient(to bottom right, blue, lightblue);
   color: white;
-  padding: 5px 15px;
+  padding: 15px 10px;
   border-radius: 5px;
 }
 
@@ -26,8 +26,8 @@ button {
 
 .main-logo {
   font-family: 'Righteous', cursive;
-  letter-spacing: 10px;
-  max-width: 80%;
+  letter-spacing: 2px;
+  max-width: 95%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 20px;
@@ -175,7 +175,7 @@ button {
 
 
 form button:hover, .add-to-team:hover, form input:hover, select:hover, .view-player:hover, .register-button:hover, .button-choice:hover {
-  background: linear-gradient(#6298ef, white);
+  background: linear-gradient(to bottom right, #6298ef, white);
   color: black;
 }
 
@@ -195,6 +195,7 @@ form button, .register-button, .button-choice {
   padding: 10px 50px;
   font-size: 20px;
   background: linear-gradient(lightblue, #fefefe);
+   border: 1px solid rgba(0, 0, 0, .5);
 }
 
 .player-avatar {
